@@ -1,0 +1,12 @@
+.card{
+    margin-top: 200px
+}
+.btn{
+    width: 100%;
+}
+.login-background {
+    background-image: url('../../assets/bosque_scren.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
