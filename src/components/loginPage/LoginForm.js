@@ -1,4 +1,5 @@
 import React from "react";
+import picture from "../../assets/bosque_pic.jpg";
 
 export class LoginForm extends React.Component {
   constructor(props) {
@@ -16,7 +17,7 @@ export class LoginForm extends React.Component {
       this.setState({ password: event.target.value });
   }
 
-  handleSubmit(event) { 
+  handleSubmit(event) {
     alert(`El usuario es: ${this.state.userName}
         El password es: ${this.state.password}`);
     event.preventDefault();
@@ -26,18 +27,18 @@ export class LoginForm extends React.Component {
     return (
       <div className="d-flex justify-content-center h-100">
         <div className="card">
-          <div className="card-header"><h2>Inicio de session el bosque app</h2></div>
+          <div className="card-header">
+           <h1>El Bosque</h1>
+          </div>
           <div className="card-body">
             <form className="col-12" onSubmit={this.handleSubmit}>
-            <div className="input-group form-group">
+              <div className="input-group form-group">
                 <div className="input-group-prepend">
-                  <span className="input-group-text">
-                    usericon
-                  </span>
+                  <span className="material-icons form-icon">perm_identity</span>
                 </div>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control form-control-lg"
                   placeholder="username"
                   name="userName"
                   value={this.state.userName}
@@ -46,13 +47,13 @@ export class LoginForm extends React.Component {
               </div>
               <div className="input-group form-group">
                 <div className="input-group-prepend">
-                  <span className="input-group-text">
-                    paswordicon
+                  <span className="material-icons form-icon">
+                  lock
                   </span>
                 </div>
                 <input
                   type="password"
-                  className="form-control"
+                  className="form-control form-control-lg"
                   placeholder="password"
                   name="password"
                   value={this.state.password}
@@ -65,7 +66,7 @@ export class LoginForm extends React.Component {
                   value="Login"
                   className="btn btn-primary"
                 />
-                </div>
+              </div>
             </form>
           </div>
           <div class="card-footer">
