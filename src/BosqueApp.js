@@ -1,11 +1,17 @@
-import React from 'react';
-import { Screen } from './components/loginPage/Screen'
-import { LoginScreen } from './components/loginPage/LoginScreen';
-import { LoginForm } from './components/loginPage/LoginForm';
-export const BosqueApp = () => {
-  return (
-   <div className='container-fluid login-container login-background'>
-     <LoginForm />
-   </div>
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import "./styles/BosqueApp.scss";
+import { Router } from "./routes/Router";
+
+export default function BosqueApp() {
+  ReactDOM.render(
+    <div className="BosqueApp"> 
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </div>,
+    document.getElementById("root")
   );
+  
 }

@@ -1,7 +1,7 @@
 import React from "react";
-import picture from "../../assets/bosque_pic.jpg";
+import './LoginStep.scss';
 
-export class LoginForm extends React.Component {
+export class LoginStep extends React.Component {
   constructor(props) {
     super(props);
     this.state = { userName: "", password: "" };
@@ -25,57 +25,57 @@ export class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className="d-flex justify-content-center h-100">
-        <div className="card">
-          <div className="card-header">
+      <>
+        <div className="LoginStep__card">
+          <div className="LoginStep__card-header">
            <h1>El Bosque</h1>
           </div>
-          <div className="card-body">
-            <form className="col-12" onSubmit={this.handleSubmit}>
-              <div className="input-group form-group">
-                <div className="input-group-prepend">
-                  <span className="material-icons form-icon">perm_identity</span>
-                </div>
+          <div className="LoginStep__card-body">
+            <form className="" onSubmit={this.handleSubmit}>
+              <div className="LoginStep__card-body__container">
+                
+                  <span className="material-icons">perm_identity</span>
+                
                 <input
                   type="text"
-                  className="form-control form-control-lg"
+                  className="field"
                   placeholder="username"
                   name="userName"
                   value={this.state.userName}
                   onChange={this.handleChange}
                 />
               </div>
-              <div className="input-group form-group">
-                <div className="input-group-prepend">
-                  <span className="material-icons form-icon">
+              <div className="LoginStep__card-body__container">
+                
+                  <span className="material-icons">
                   lock
                   </span>
-                </div>
+                
                 <input
                   type="password"
-                  className="form-control form-control-lg"
+                  className="field"
                   placeholder="password"
                   name="password"
                   value={this.state.password}
                   onChange={this.handleChange}
                 />
               </div>
-              <div className="form-group">
+              <div className="LoginStep__card-body__container">
                 <input
                   type="submit"
                   value="Login"
-                  className="btn btn-primary"
+                  className="btn"
                 />
               </div>
             </form>
           </div>
-          <div class="card-footer">
-            <div class="d-flex justify-content-center">
+          <div className="LoginStep__card-footer">
+            <div className="">
               <a href="#">Forgot your password?</a>
             </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }

@@ -1,0 +1,64 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.LoginStep {
+  &__card {
+    @include flex-column;
+    @include shadow;
+    border-radius: 5px;
+    height: 400px;
+    background-color: $backgroundPrimaryColor;
+    min-width: 30vw;
+  }
+  &__card-header {
+    @include flex-column-center;
+    height: 30%;
+    h1 {
+      font-family: $titleFont;
+      font-size: 70px;
+      color: white;
+    }
+  }
+  &__card-body {
+    @include flex-column;
+    height: 60%;
+    &__container {
+      @include flex-row-center;
+      width: 100%;
+      .material-icons {
+        font-size: 50px;
+        margin: 5px;
+        width: 10%;
+        color: white;
+      }
+      .field {
+        font-family: $textFont;
+        text-align: center;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 7px;
+        width: 70%;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      .btn {
+        @include main-button;
+        margin: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        width: 60%;
+        &:hover {
+          background-color: brown;
+        }
+      }
+    }
+  }
+  &__card-footer {
+    @include flex-column;
+    height: 10%;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}

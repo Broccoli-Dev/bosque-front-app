@@ -1,0 +1,110 @@
+@import "./variables.scss";
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin shadow {
+  -webkit-box-shadow: 10px 10px 29px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 29px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 29px -10px rgba(0, 0, 0, 0.75);
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row-center() {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column-center(){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin step-styles(){
+    padding: 15px 0;
+    font-size: 11.9px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+}
+
+@mixin a-without-styles(){
+
+}
+
+@mixin main-button{
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: $buttonSecondaryColor;
+    font-family: $textFont;
+    color:white;
+    cursor: pointer;
+    border: 0px;
+    border: .5px solid black;
+    @include flex-column-center;
+    @include shadow;
+}
+
+@mixin error-button{
+    outline: none;
+    padding: 5px 20px;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: 0px;
+    @include flex-row-center;
+} 
+
+@mixin dialog($max-width){
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: black;
+
+    &__card{
+        max-width: $max-width;
+        height: fit-content;
+        background-color: white;
+        border-radius: 17px;
+        padding: 30px 40px;
+        position: relative;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+
+    &__card-container{
+        width: 100vw;
+        height: 100vh;
+        @include flex-row-center;
+    }
+
+    &__close-dialog-icon{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        border-radius: 50%;
+        font-size: 14px;
+        background-color: black;
+        color: white;
+        @include flex-row-center;
+        cursor: pointer;
+    }
+}
+    
