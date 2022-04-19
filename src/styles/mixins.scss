@@ -46,13 +46,13 @@
 @mixin main-button{
     outline: none;
     padding: 10px 20px;
-    border-radius: 25px;
-    background-color: $buttonSecondaryColor;
+    border-radius: 10px;
+    background-color: $buttonPrimaryColor;
     font-family: $textFont;
-    color:white;
+    color:$textSecondaryColor;
     cursor: pointer;
     border: 0px;
-    border: .5px solid black;
+    border: .5px solid $buttonSecondaryColor;
     @include flex-column-center;
     @include shadow;
 }
