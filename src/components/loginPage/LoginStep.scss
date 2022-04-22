@@ -6,59 +6,93 @@
     @include flex-column;
     @include shadow;
     border-radius: 5px;
-    height: 400px;
+    height: 70%;
     background-color: $backgroundPrimaryColor;
     min-width: 30vw;
+    border: 1px solid $backgroundSecondaryColor;
   }
+
   &__card-header {
     @include flex-column-center;
-    height: 30%;
+    height: 25%;
+
     h1 {
       font-family: $titleFont;
-      font-size: 70px;
+      font-size: 7vw;
       color: white;
     }
   }
+
   &__card-body {
     @include flex-column;
     height: 60%;
+    padding: 15px;
+    padding-bottom: 5px;
+    background-color: white;
+
+    .field {
+      @include flex-row-center;
+      font-family: $textFont;
+      text-align: center;
+      border-radius: 10px;
+      padding: 5px;
+      margin: 10px;
+      min-width: 60%;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
     &__container {
       @include flex-row-center;
       width: 100%;
+
       .material-icons {
-        font-size: 50px;
+        @include flex-column;
+        font-size: 60px;
         margin: 5px;
-        width: 10%;
-        color: white;
+        min-width: 20%;
+        text-align: right;
+        color: $textSecondaryColor;
       }
-      .field {
+
+      h2 {
+        @include flex-column;
         font-family: $textFont;
-        text-align: center;
-        border-radius: 10px;
-        padding: 5px;
-        margin: 7px;
-        width: 70%;
-        font-size: 24px;
-        cursor: pointer;
+        font-size: 30px;
+        min-width: 40%;
+        text-align: left;
+        margin-top: 15px;
+        color: $textSecondaryColor;
       }
+
+      .button-container {
+        @include flex-row;
+        justify-content: left;
+        width: 100%;
+      }
+
       .btn {
         @include main-button;
-        margin: 10px;
+        margin-top: 40px;
         font-size: 1.2rem;
         font-weight: bold;
         width: 60%;
         &:hover {
-          background-color: $buttonSecondaryColor;
+          background-color: $backgroundSecondaryColor;
+          color: white;
         }
       }
     }
   }
+
   &__card-footer {
-    @include flex-column;
+    @include flex-row-center;
     height: 10%;
+
     a {
       color: white;
       text-decoration: none;
+      font-size: 20px;
     }
   }
 }

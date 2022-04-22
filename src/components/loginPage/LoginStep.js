@@ -1,5 +1,5 @@
 import React from "react";
-import './LoginStep.scss';
+import "./LoginStep.scss";
 
 export class LoginStep extends React.Component {
   constructor(props) {
@@ -28,14 +28,15 @@ export class LoginStep extends React.Component {
       <>
         <div className="LoginStep__card">
           <div className="LoginStep__card-header">
-           <h1>El Bosque</h1>
+            <h1>El Bosque</h1>
           </div>
           <div className="LoginStep__card-body">
             <form className="" onSubmit={this.handleSubmit}>
               <div className="LoginStep__card-body__container">
-                
-                  <span className="material-icons">perm_identity</span>
-                
+                <span className="material-icons">perm_identity</span>
+                <h2>Usuario</h2>
+              </div>
+              <div className="LoginStep__card-body__container">
                 <input
                   type="text"
                   className="field"
@@ -46,11 +47,10 @@ export class LoginStep extends React.Component {
                 />
               </div>
               <div className="LoginStep__card-body__container">
-                
-                  <span className="material-icons">
-                  lock
-                  </span>
-                
+                <span className="material-icons">lock</span>
+                <h2>Contrasena</h2>
+              </div>
+              <div className="LoginStep__card-body__container">
                 <input
                   type="password"
                   className="field"
@@ -60,12 +60,9 @@ export class LoginStep extends React.Component {
                   onChange={this.handleChange}
                 />
               </div>
-              <div className="LoginStep__card-body__container">
-                <input
-                  type="submit"
-                  value="Login"
-                  className="btn"
-                />
+
+              <div className="LoginStep__card-body__container button-container">
+                <input type="submit" value="Login" className="btn" />
               </div>
             </form>
           </div>

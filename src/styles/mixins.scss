@@ -23,6 +23,11 @@
     align-items: center;
 }
 
+@mixin flex-row() {
+    display: flex;
+    flex-direction: row;
+}
+
 @mixin flex-column-center(){
     display: flex;
     flex-direction: column;
@@ -47,7 +52,7 @@
     outline: none;
     padding: 10px 20px;
     border-radius: 10px;
-    background-color: $buttonPrimaryColor;
+    background-color: $buttonSecondaryColor;
     font-family: $textFont;
     color:$textSecondaryColor;
     cursor: pointer;
